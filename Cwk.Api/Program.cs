@@ -1,4 +1,7 @@
 
+using Cwk.Infraestruture.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace Cwk.Api
 {
     public class Program
@@ -8,6 +11,10 @@ namespace Cwk.Api
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
+
+            //Contexto de datos
+            builder.Services.AddDbContext<AppDbContext>(options => 
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnetion")));
 
             builder.Services.AddControllers();
             // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
