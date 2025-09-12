@@ -1,0 +1,14 @@
+﻿using AutoMapper;
+using Cwk.Domain.DTOs.Responses;
+using Cwk.Domain.Entities;
+
+namespace Cwk.Business.Mapping
+{
+    public class MappingProfile : Profile
+    {
+        public MappingProfile()
+        {
+            CreateMap<User, UserResponseDto>();
+        }
+    }
+}

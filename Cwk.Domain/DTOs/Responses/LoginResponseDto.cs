@@ -10,6 +10,6 @@ namespace Cwk.Domain.DTOs.Responses
     {
         public bool IsAuthencated { get; set; }
         public string Token { get; set; } = null!;
-        public string message { get; set; } = null!;
+        public string Message { get; set; } = null!;
     }
 }

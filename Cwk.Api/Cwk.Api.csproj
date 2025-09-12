@@ -8,13 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.7" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.4" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\Cwk.Business\Cwk.Business.csproj" />
     <ProjectReference Include="..\Cwk.Domain\Cwk.Domain.csproj" />
     <ProjectReference Include="..\Cwk.Infraestruture\Cwk.Infraestruture.csproj" />
   </ItemGroup>

@@ -24,7 +24,7 @@ namespace Cwk.Infraestruture.Repositories
         public async Task<User> GetByidAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
-            return user;
+            return user!;
         }
 
         public async Task<User> GetUserByemailAsync(string email)
