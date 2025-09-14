@@ -13,6 +13,7 @@ namespace Cwk.Web
             builder.RootComponents.Add<HeadOutlet>("head::after");
             var url = "https://localhost:7113";
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(url) });
+            builder.Services.AddAuthorizationCore();
 
             builder.Services.AddMudServices();
 
